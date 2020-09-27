@@ -7,8 +7,10 @@ name: Publish Assignments to SNS
 on:
   push:
     branches: [ master ]
+    paths: [ assignments.csv ]
   pull_request:
     branches: [ master ]
+    paths: [ assignments.csv ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,7 +38,7 @@ jobs:
         uses: nothingalike/sns-publish-topic@v1.6
         with:
           # The message you want to send
-          MESSAGE: ${ steps.assignments.outputs.contents }
+          MESSAGE: ${{ steps.assignments.outputs.contents }}
           # The topic arn you are sending
           TOPIC_ARN: ${{ secrets.TOPIC_ARN }}
           # A AWSN SNS Region. Can alternatively be stored in environment

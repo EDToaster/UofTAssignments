@@ -11,7 +11,7 @@ Format for `assignemnts.csv` is
 | :---------        | :-----    | :----------                                           | 
 | course            | String    | course name, like `csc410`                            | 
 | assignment_name   | String    | assignment name                                       | 
-| date              | ISO8601   | date string, like `20200925T125959-0400`              |
+| date              | ISO8601   | date string, like `2020-09-25T12:59:59-0400`              |
 | reminder          | Integer   | bit-field like `6 == 0b111`. Refer to section below   | 
 
 ## `reminder` bitfield

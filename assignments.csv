@@ -1,7 +1,7 @@
 course,assignment_name,date,reminder
-csc410,Assignment (1): Automated Theorem Proving/Recursive Program Correctness,20200925T235959-0400,680
-csc410,Assignment (2): Iterative Program Correctness,20201007T235959-0400,680
-csc410,Assignment (3): SAT for problem solving,20201019T235959-0400,680
-csc410,Assignment (4): SMT for problem solving,20201030T235959-0400,680
-csc410,Assignment (5): LTL/CTL and Model Checking,20201124T235959-0500,680
-csc410,Assignment (6): Program Synthesis,20201208T235959-0500,680
+csc410,Assignment (1): Automated Theorem Proving/Recursive Program Correctness,2020-09-25T23:59:59-0400,680
+csc410,Assignment (2): Iterative Program Correctness,2020-10-07T23:59:59-0400,680
+csc410,Assignment (3): SAT for problem solving,2020-10-19T23:59:59-0400,680
+csc410,Assignment (4): SMT for problem solving,2020-10-30T23:59:59-0400,680
+csc410,Assignment (5): LTL/CTL and Model Checking,2020-11-24T23:59:59-0500,680
+csc410,Assignment (6): Program Synthesis,2020-12-08T23:59:59-0500,680
