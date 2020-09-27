@@ -31,3 +31,5 @@ function Assignment(course, name, date, reminder) {
     self.date = new Date(date);
     self.reminders = parseReminders(reminder);
 }
+
+module.exports = { Assignment };
