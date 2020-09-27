@@ -1,10 +1,6 @@
 const { Assignment } = require("./assignment.js");
 const parse = require('csv-parse/lib/sync');
 
-const translateCSV = (lines) => {
-    return data.map(({course, assignment_name, date, reminder}) => new Assignment(course, assignment_name, date, reminder));
-}
-
 const clearReminders = () => {
     // clear all triggers from lambda UofTAssignmentRemind
 }
@@ -15,7 +11,9 @@ const handleAssignment = (assignment) => {
 
 const handleMessage = (message) => {
     clearReminders();
-    translateCSV(parse(message), { columns: true, skip_empty_lines: true }).forEach(handleAssignment);
+    parse(message, { columns: true, skip_empty_lines: true })
+        .map(({course, assignment_name, date, reminder}) => new Assignment(course, assignment_name, date, reminder))
+        .forEach(handleAssignment);
 }
 
 exports.handler = async (event) => {
