@@ -21,6 +21,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: Get file contents
+        id: assignments
+        # You may pin to the exact commit or the version.
+        # uses: andstor/file-reader-action@babb053761401147562e75be79d832978cc97325
+        uses: andstor/file-reader-action@v1.0.0
+        with:
+          # The path to the file to be read.
+          path: assignments.csv
         
       - name: Publish Changes to SNS
         # You may pin to the exact commit or the version.
@@ -28,7 +36,7 @@ jobs:
         uses: nothingalike/sns-publish-topic@v1.6
         with:
           # The message you want to send
-          MESSAGE: changed
+          MESSAGE: ${ steps.assignments.outputs.contents }
           # The topic arn you are sending
           TOPIC_ARN: ${{ secrets.TOPIC_ARN }}
           # A AWSN SNS Region. Can alternatively be stored in environment
