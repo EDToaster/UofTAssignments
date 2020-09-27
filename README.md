@@ -1,4 +1,5 @@
 # UofT Assignments
+![Publish Assignments to SNS](https://github.com/EDToaster/UofTAssignments/workflows/Publish%20Assignments%20to%20SNS/badge.svg)
 
 Personal repo to keep track of my assignments and when they are due.
 
