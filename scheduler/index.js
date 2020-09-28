@@ -1,8 +1,8 @@
 const { Assignment } = require("./assignment.js");
 const parse = require('csv-parse/lib/sync');
+const axios = require("axios");
 
 const { webhook_url } = process.env;
-const axios = require("axios");
 
 const sendMessage = async (message) => {
     const config = {
