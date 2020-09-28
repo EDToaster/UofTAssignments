@@ -32,7 +32,7 @@ const handleAssignment = (assignment) => {
 }
 
 const handleMessage = async (message) => {
-    await deleteRules(arns);
+    await deleteRules();
     parse(message, { columns: true, skip_empty_lines: true })
         .map(({course, assignment_name, date, reminder}) => new Assignment(course, assignment_name, date, reminder))
         .forEach(handleAssignment);
