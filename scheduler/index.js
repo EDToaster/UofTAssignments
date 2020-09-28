@@ -23,8 +23,8 @@ const sendMessage = async (message) => {
     return response;
 };
 
-const deleteRules = () => {
-    sendMessage("$del");
+const deleteRules = async () => {
+    await sendMessage("$del");
 }
 
 const handleAssignment = (assignment) => {
